@@ -30,13 +30,13 @@ class Song
   def self.artists
     @@artists.uniq
   
-  def genre_count
-    @@genre_hash = {}
+  def self.genre_count
+    genre_count = {}
     @@genres.each do |genre|
-      if @@genres_hash[genre]
-        @@genres_hash[genre] += 1
+      if genre_count[genre]
+        genre_count[genre] += 1
       else
-        @@genres_hash[genre] = 1
+        genre_count[genre] = 1
       end
     end
   end
