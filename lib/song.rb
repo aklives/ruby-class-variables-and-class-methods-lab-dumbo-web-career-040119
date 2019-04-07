@@ -18,6 +18,7 @@ class Song
   
   def self.genres 
     new_arr = @@genres.uniq
+  end
   
   def genre_count
     @@genre_hash = {}
